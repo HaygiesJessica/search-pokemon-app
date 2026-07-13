@@ -36,6 +36,16 @@ function getNameStyle(types) {
   };
 }
 
+function formatStatName(name) {
+  return name
+    .replace("special-attack", "Special Attack")
+    .replace("special-defense", "Special Defense")
+    .replace("hp", "HP")
+    .replace("attack", "Attack")
+    .replace("defense", "Defense")
+    .replace("speed", "Speed");
+}
+
 function PokemonCard({ pokemon, loading }) {
   if (loading) {
     return <h2>Loading...</h2>;
@@ -97,9 +107,7 @@ function PokemonCard({ pokemon, loading }) {
         <tbody>
           {pokemon.stats.map((stat) => (
             <tr key={stat.stat.name}>
-              <td>
-                <strong>{stat.stat.name}</strong>
-              </td>
+              <td>{formatStatName(stat.stat.name)}</td>
               <td>{stat.base_stat}</td>
             </tr>
           ))}
