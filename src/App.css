@@ -21,7 +21,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 16px;
 }
 
 .container {
@@ -29,7 +29,7 @@ body,
   max-width: 520px;
   background: white;
   border-radius: 24px;
-  padding: 32px;
+  padding: 24px 16px;
   border: 6px solid #2c2c2c;
   box-shadow:
     0 20px 40px rgba(0,0,0,.35),
@@ -69,12 +69,14 @@ header p {
 
 .search-box {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  gap: 8px;
   margin-bottom: 25px;
 }
 
 .search-box input {
   flex: 1;
+  min-width: 0;
   padding: 14px;
   border: 3px solid #2c2c2c;
   border-radius: 14px;
@@ -116,8 +118,11 @@ header p {
 }
 
 .pokemon-card img {
-  width: 180px;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
   margin: auto;
+  display: block;
 }
 
 .pokemon-card h2 {
@@ -132,9 +137,7 @@ header p {
 .pokemon-card h3 {
   margin-top: 22px;
   margin-bottom: 10px;
-
   text-align: center;
-
   color: #a83333;
   font-size: 1rem;
   font-weight: 800;
@@ -160,7 +163,6 @@ header p {
 }
 
 /* Pokemon Types */
-
 .type-normal { background:#A8A878; }
 .type-fire { background:#F08030; }
 .type-water { background:#6890F0; }
@@ -181,7 +183,6 @@ header p {
 .type-fairy { background:#EE99AC; color:black; }
 
 /* Abilities */
-
 .abilities-list {
   list-style: none;
   padding: 0;
@@ -197,7 +198,6 @@ header p {
   padding: 8px 12px;
   border-radius: 20px;
 }
-
 
 .stats-table {
   width: 100%;
@@ -228,4 +228,19 @@ header p {
 audio {
   width: 100%;
   margin-top: 15px;
+}
+
+/* Responsive adjustments for phones */
+@media (max-width: 480px) {
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-box button {
+    width: 100%;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
 }
