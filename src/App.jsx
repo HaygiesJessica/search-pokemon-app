@@ -43,7 +43,6 @@ function App() {
       <div className="container">
         <Header
           title="Pokemon Search App"
-          description="Search your favorite Pokémon!"
         />
 
         <SearchBar

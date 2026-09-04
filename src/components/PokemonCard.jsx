@@ -52,7 +52,7 @@ function PokemonCard({ pokemon, loading }) {
   }
 
   if (!pokemon) {
-    return <h2>Search for a Pokémon!</h2>;
+    return <h2> <i> Search for a Pokémon! </i> </h2>;
   }
 
   return (
