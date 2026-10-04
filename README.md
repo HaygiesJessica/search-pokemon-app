@@ -28,9 +28,4 @@ This project uses the PokéAPI to retrieve Pokémon data.
 
 https://pokeapi.co/
 
-## Run Locally
 
-Clone the repository:
-
-```bash
-git clone <your-repository-url>
